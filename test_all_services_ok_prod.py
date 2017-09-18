@@ -1,7 +1,7 @@
 import requests
 
 
-class TestClass(object):
+class TestServices(object):
 
     # booglak@gmail.com
 
@@ -58,6 +58,15 @@ class TestClass(object):
         request = requests.get(self.host + '/UserService/1234',
                                headers={"Authorization": self.adminWs})
         assert request.status_code == 200
+        assert '"IsReserve":false' in str(request.text)
+
+
+
+
+
+
+
+
 
 
 
