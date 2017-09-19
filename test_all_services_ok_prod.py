@@ -1,4 +1,5 @@
 import requests
+import pytest
 
 
 class TestServices(object):
@@ -12,7 +13,7 @@ class TestServices(object):
         request = requests.post(self.host + '/AuthenticationService/',
                                 headers={"content-type": "application/json"},
                                 json={"Login": "booglak@gmail.com", "Password": "222222"})
-        assert request.status_code == 200
+        assert request.status_code == 201
 
     def test_competence_service(self):
         request = requests.get(self.host + '/CompetenceService/1',
@@ -59,6 +60,10 @@ class TestServices(object):
                                headers={"Authorization": self.adminWs})
         assert request.status_code == 200
         assert '"IsReserve":false' in str(request.text)
+
+
+
+
 
 
 
