@@ -13,7 +13,7 @@ class TestServices(object):
         request = requests.post(self.host + '/AuthenticationService/',
                                 headers={"content-type": "application/json"},
                                 json={"Login": "booglak@gmail.com", "Password": "222222"})
-        assert request.status_code == 201
+        assert request.status_code == 200
 
     def test_competence_service(self):
         request = requests.get(self.host + '/CompetenceService/1',
