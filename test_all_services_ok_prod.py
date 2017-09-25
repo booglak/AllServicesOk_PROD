@@ -1,8 +1,8 @@
 import requests
-import pytest
+import unittest
 
 
-class TestServices(object):
+class TestServices(unittest.TestCase):
 
     # booglak@gmail.com
 
@@ -59,9 +59,11 @@ class TestServices(object):
         request = requests.get(self.host + '/UserService/1234',
                                headers={"Authorization": self.adminWs})
         assert request.status_code == 200
-        assert '"IsReserve":false' in str(request.text)
+        assert '"IsReserve":fale' in str(request.text)
 
 
+if __name__ == "__main__":
+    unittest.main()
 
 
 

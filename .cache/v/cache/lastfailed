@@ -1,3 +1,4 @@
 {
-  "test_all_services_ok_prod.py::TestServices::()::test_user_service": true
+  "test_all_services_ok_prod.py::TestServices::()::test_user_service": true,
+  "test_all_services_ok_prod.py::TestServices::test_user_service": true
 }
